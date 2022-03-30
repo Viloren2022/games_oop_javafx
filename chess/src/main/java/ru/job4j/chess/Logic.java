@@ -25,8 +25,7 @@ public final class Logic {
         for (Figure figure : figures) {
             for (Cell step : steps) {
                 if (step == figure.position()) {
-                    throw new OccupiedCellException(
-                            String.format("Cell %s contains a shape", step));
+                    throw new OccupiedCellException();
                 }
             }
         }
