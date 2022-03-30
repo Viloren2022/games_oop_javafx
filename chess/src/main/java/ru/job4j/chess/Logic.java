@@ -21,7 +21,16 @@ public final class Logic {
     }
 
     private boolean free(Cell[] steps) throws OccupiedCellException {
-        return true;
+        boolean rsl = true;
+        for (Figure figure : figures) {
+            for (Cell step : steps) {
+                if (step == figure.position()) {
+                    throw new OccupiedCellException(
+                            String.format("Cell %s contains a shape", step));
+                }
+            }
+        }
+        return rsl;
     }
 
     public void clean() {
