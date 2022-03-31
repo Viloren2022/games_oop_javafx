@@ -32,7 +32,7 @@ public class BishopBlackTest {
 
     @Test
     public void bishopBlackIsDiagonal() {
-        BishopBlack bishopBlack = new BishopBlack(Cell.C1);
-        bishopBlack.way(Cell.C1);
+        BishopBlack bishopBlack = new BishopBlack(Cell.C8);
+        assertThat(bishopBlack.way(Cell.D7), is(bishopBlack.way(Cell.D7)));
     }
 }
